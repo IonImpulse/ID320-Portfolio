@@ -1,0 +1,98 @@
+@font-face { font-family: JetBrainsMono-ExtraBold; font-weight: extra-bold; src: url('fonts/JetBrainsMono-ExtraBold.ttf'); }
+@font-face { font-family: Rockwell; font-weight: normal; src: url('fonts/ROCK.TTF'); }
+@font-face { font-family: TwCenMT; font-weight: normal; src: url('fonts/TCM_____.TTF'); }
+@font-face { font-family: TwCenMT; font-weight: bold; src: url('fonts/TCB_____.TTF'); }
+
+
+body {
+  background-color: rgb(0, 4, 24);
+}
+
+#top-header {
+  background-color: rgb(30, 24, 83);
+  box-shadow: 10px 10px rgb(255, 255, 255);
+  font-family: "JetBrainsMono-ExtraBold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 3rem 12rem;
+  padding: 2rem;
+}
+
+.wrapper {
+  font: normal 20px TwCenMt, sans-serif;
+  line-height: 25px;
+  color: #fff;
+  padding: 100px 20px 200px;
+}
+
+.block {
+  z-index: 1;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    height: calc(100% - 40px);
+    width: 1px;
+    background-color: #f2f2f2;
+    left: 50%;
+    margin-top: 110px;
+  }
+}
+
+.title {
+  font: Bold 52px Rockwell, sans-serif;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.8s ease-in-out;
+  background-color: rgb(42, 18, 61);
+  box-shadow: 10px 10px rgb(255, 255, 255);
+  max-width: 25rem;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.each-event {
+  background-color: #f4f4f4;
+  color: rgb(15, 15, 15);
+  padding: 20px;
+  margin: 100px 60px;
+  width: 500px;
+  position: relative;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: all 0.6s ease-in-out;
+  &:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 8px);
+    left: -27px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 4px 20px -4px rgba(64, 64, 64, 0.8);
+  }
+  &:nth-child(odd) {
+    margin-left: calc(50% + 20px);
+  }
+  &:nth-child(even) {
+    margin-left: calc(50% - 521px);
+    &:before {
+      left: calc(100% + 14px);
+    }
+  }
+}
+
+.each-event.non-focus {
+  color: #d2d2d2;
+  background: #e6e6e6;
+  margin-top: 150px;
+  transition: all 0.8s ease-in-out;
+  &:before {
+    opacity: 0;
+    background-color: #aaa;
+  }
+}
