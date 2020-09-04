@@ -29,6 +29,28 @@ body {
   margin: 3rem 12rem;
   padding: 2rem; }
 
+#legend {
+  background-color: white;
+  font-family: "JetBrainsMono-ExtraBold";
+  font-style: normal;
+  font-weight: bold;
+  max-width: 30rem;
+  border-radius: 15px;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 30px; }
+
+.color-block {
+  background-color: black;
+  font-size: 20px;
+  font-family: "TwCenMt";
+  color: white;
+  margin: 0 auto;
+  padding: 10px; }
+
 .wrapper {
   font: normal 20px TwCenMt, sans-serif;
   line-height: 25px;
