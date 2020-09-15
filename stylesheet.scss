@@ -21,35 +21,49 @@ body {
   padding: 2rem;
 }
 
-#legend {
-  background-color: rgb(255, 255, 255);
+#legend-top {
   font-family: "JetBrainsMono-ExtraBold";
   font-style: normal;
-  font-weight: bold;
-  max-width: 30rem;
-  border-radius: 15px;
-  font-size: 30px;
   color: rgb(0, 0, 0);
   text-align: center;
-  margin: 0 auto;
-  
-  padding-top: 20px;
-  padding-bottom: 30px;
+  display: flex;
+  transition: top 0.2s ease-in-out;
+  z-index: 1000; /* Position the navbar at the top of the page */
+  width: 97%; /* Full width */
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
 
+#legend-top > .color-block {
+  margin-bottom: 0px !important;
+}
+.nav-up {
+  top: -50px; // same as header height. use variables in LESS/SASS
+}
+
+.nav-down {
+  top: 10px;
 }
 
 .color-block {
   background-color: black;
-  font-size: 20px;
+  font-size: 28px;
   font-family: "TwCenMt";
+  font-weight: bold;
   color: white;
   margin: 0 auto;
   padding: 10px;
+  flex: 'flex-grow';
+  flex-grow: 1;
+  margin-top: 0px;
+  margin-bottom: 20px;
 }
 
 .wrapper {
-  font: normal 20px TwCenMt, sans-serif;
-  line-height: 25px;
+  font: normal 22px TwCenMt, sans-serif;
+  line-height: 28px;
   color: #fff;
   padding: 100px 20px 200px;
 }
@@ -73,19 +87,19 @@ body {
   text-align: center;
   padding: 20px;
   transition: all 0.8s ease-in-out;
-  background-color: rgb(42, 18, 61);
+  background-color: rgb(197, 98, 6);
   box-shadow: 10px 10px rgb(255, 255, 255);
   max-width: 25rem;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .each-event {
   background-color: #f4f4f4;
   color: rgb(15, 15, 15);
-  padding: 20px;
+  padding: 40px;
   margin: 100px 60px;
-  width: 500px;
+  width: 700px;
   position: relative;
   border-radius: 4px;
   box-sizing: border-box;
@@ -105,7 +119,7 @@ body {
     margin-left: calc(50% + 20px);
   }
   &:nth-child(even) {
-    margin-left: calc(50% - 521px);
+    margin-left: calc(50% - 721px);
     &:before {
       left: calc(100% + 14px);
     }
@@ -121,4 +135,20 @@ body {
     opacity: 0;
     background-color: #aaa;
   }
+}
+
+.main-idea {
+  background-color:brown;
+}
+
+.activity {
+  background-color: rgb(28, 131, 15);
+}
+
+.speaker {
+  background-color: rgb(11, 53, 102);
+}
+
+.misc {
+  background-color:rgb(90, 13, 97);
 }

@@ -19,3 +19,14 @@ function check_for_fade() {
  
     });
 };
+
+$(document).scroll(function() {
+    var y = $(this).scrollTop();
+    console.log(y);
+    if (y > 100) {
+      $("#legend-top").addClass("nav-down").removeClass("nav-up");
+      console.log("alisdjfk");
+    } else {
+      $("#legend-top").addClass("nav-up").removeClass("nav-down");
+    }
+});
