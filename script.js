@@ -10,8 +10,8 @@ function check_for_fade() {
         var $element = $(this);
         var element_height = $element.outerHeight();
         var element_offset = $element.offset().top;
-        space = window_height - (element_height + element_offset -$(window).scrollTop());
-        if (space < 60) {
+        space = window_height - (element_offset -$(window).scrollTop());
+        if (space < 300) {
             $element.addClass("non-focus");
         } else {
             $element.removeClass("non-focus");
@@ -22,10 +22,8 @@ function check_for_fade() {
 
 $(document).scroll(function() {
     var y = $(this).scrollTop();
-    console.log(y);
     if (y > 100) {
       $("#legend-top").addClass("nav-down").removeClass("nav-up");
-      console.log("alisdjfk");
     } else {
       $("#legend-top").addClass("nav-up").removeClass("nav-down");
     }
