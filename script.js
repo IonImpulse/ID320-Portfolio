@@ -24,7 +24,14 @@ $(document).scroll(function() {
     var y = $(this).scrollTop();
     if (y > 100) {
       $("#legend-top").addClass("nav-down").removeClass("nav-up");
+      $("#progress-container").addClass("progress-up").removeClass("progress-down");
     } else {
       $("#legend-top").addClass("nav-up").removeClass("nav-down");
+      $("#progress-container").addClass("progress-down").removeClass("progress-up");
     }
+
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
 });

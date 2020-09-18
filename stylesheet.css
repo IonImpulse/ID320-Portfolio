@@ -17,6 +17,15 @@
 body {
   background-color: #0e0e20; }
 
+.noscroll::-webkit-scrollbar {
+  display: none; }
+
+.noscroll {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+
 #top-header {
   background-color: #1e1853;
   box-shadow: 10px 10px white;
@@ -146,5 +155,32 @@ body {
 
 .reflection {
   background-color: #5a0d61; }
+
+#progress-container {
+  position: fixed;
+  transition: bottom 0.2s ease-in-out;
+  z-index: 1;
+  width: 97%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  background: white;
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.5); }
+
+.progress-down {
+  bottom: -40px; }
+
+.progress-up {
+  bottom: 12px; }
+
+.progress-bar {
+  height: 20px;
+  background: #4caf50;
+  width: 0%; }
+
+.goodgrade {
+  color: white;
+  text-align: center; }
 
 /*# sourceMappingURL=stylesheet.css.map */
